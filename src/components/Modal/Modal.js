@@ -7,7 +7,7 @@ class Modal extends Component {
     }
 
     render() {
-        const { activeStyle, generalStyle, children } = this.props = this.props
+        const { activeStyle, generalStyle, children } = this.props
         return (
             <div className={styles.modal} style={{ ...generalStyle, ...activeStyle }} >
                 {children}
