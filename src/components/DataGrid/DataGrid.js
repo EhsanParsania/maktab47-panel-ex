@@ -36,10 +36,10 @@ class Datagrid extends Component {
                     <div className={style.datagridHeader}>
                         <h2>{title}</h2>
                         <div>
-                            <button className={style.shareButton}>Share</button>
-                            <button className={style.exportButton}>Export</button>
-                            <button className={style.weekButton} style={{marginLeft:"20px"}}>This Week</button>
-                            <Button text="click" click={this.modalDisplayHandler} />
+                            <Button text="Share" cssClass={style.shareButton} />
+                            <Button text="Export" cssClass={style.exportButton}/>
+                            <Button text="This Week" cssClass={style.weekButton} cssStyle={{marginLeft:"20px"}} />
+                            <Button text="Add"  cssClass={style.addButton} click={this.modalDisplayHandler}/>
                         </div>
                     </div>
                     <table className={style.datagridTable}>
