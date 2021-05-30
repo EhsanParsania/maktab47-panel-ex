@@ -14,9 +14,9 @@ class Button extends Component {
     }
 
     render() {
-        const { text } = this.props
+        const { text, cssClass, cssStyle } = this.props
         return (
-            <button onClick={this.handler} >{text}</button>
+            <button onClick={this.handler} className={cssClass} style={cssStyle} >{text}</button>
         )
     }
 }
