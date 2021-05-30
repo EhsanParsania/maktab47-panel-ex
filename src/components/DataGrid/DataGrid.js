@@ -1,4 +1,5 @@
 import { Component } from "react"
+import {Button} from "../index"
 import {Modal} from "../index"
 import style from "./DataGrid.module.css"
 
@@ -17,6 +18,10 @@ class Datagrid extends Component {
         super(props)
     }
 
+    modalDisplayHandler = ({target}) => {
+        this.setState({ showModel : !this.state.showModel })
+    }
+
     render() {
         const {data, title} = this.props
         const fields = Object.keys(data[0]).filter(field => field!=="id")
@@ -30,6 +35,7 @@ class Datagrid extends Component {
                             <button className={style.shareButton}>Share</button>
                             <button className={style.exportButton}>Export</button>
                             <button className={style.weekButton} style={{marginLeft:"20px"}}>This Week</button>
+                            <Button text="click" click={this.modalDisplayHandler} />
                         </div>
                     </div>
                     <table className={style.datagridTable}>
