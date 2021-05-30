@@ -9,9 +9,13 @@ class Datagrid extends Component {
         showModel: false,
     }
 
-    showModalStyle = {
+    activeModalStyle = {
         opacity:1,
         top:'100px'
+    }
+
+    generalModalStyle = {
+        borderRadius:'12px'
     }
 
     constructor(props) {
@@ -27,7 +31,7 @@ class Datagrid extends Component {
         const fields = Object.keys(data[0]).filter(field => field!=="id")
         return (
             <div id="datagrid">
-                <Modal activeStyle = { this.state.showModel ? this.showModalStyle : {} }/>
+                <Modal activeStyle = { this.state.showModel ? this.activeModalStyle : {} } generalStyle={this.generalModalStyle} />
                 <div className={style.datagridContainer}>
                     <div className={style.datagridHeader}>
                         <h2>{title}</h2>
