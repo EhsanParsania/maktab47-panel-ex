@@ -1,0 +1,57 @@
+.headerContainer {
+    width: 100%;
+    background-color:rgb(56, 56, 56);
+    display:flex;
+    align-items: center;
+}
+
+.navigationContainer {
+    display:flex;
+    width: 80%;
+    list-style:none;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+.companyName {
+    width:20%;
+    height: 100%;
+    /* margin:0px 15px; */
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.5em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    background-color: rgb(37, 37, 37);
+}
+
+.button{
+   height: 50px;
+   width: 100px;
+   background-color: rgb(37, 37, 37);
+   color:#999 ;
+   font-weight: bold;
+   border: none;
+   cursor: pointer;
+}
+
+.form{
+    display: flex;
+}
+
+.input{
+    width:100%;
+    height: 100%;
+    background-color:rgb(56, 56, 56);
+    border: none;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+
+
+}
+
+.li{
+ display: flex;
+}

@@ -1,0 +1,35 @@
+.sideNav {
+    width:20%;
+    height: 700px;
+    padding:10px 15px;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sideDiv{
+    list-style: none;
+    cursor: pointer;
+    margin: 10px;
+}
+.sideSpan {
+    position: relative;
+    align-self: center;
+    justify-content: center;
+}
+.sideLink {
+    color: black;
+    text-decoration: none;
+    margin-left: 25px;
+    
+}
+.sideImg {
+    width: 20px;
+    position: absolute;
+
+    
+    
+    
+    
+}
