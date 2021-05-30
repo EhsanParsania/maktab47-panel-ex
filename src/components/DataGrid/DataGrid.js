@@ -1,7 +1,18 @@
 import { Component } from "react"
+import {Modal} from "../index"
 import style from "./DataGrid.module.css"
 
 class Datagrid extends Component {
+
+    state = {
+        showModel: false,
+    }
+
+    showModalStyle = {
+        opacity:1,
+        top:'100px'
+    }
+
     constructor(props) {
         super(props)
     }
@@ -11,6 +22,7 @@ class Datagrid extends Component {
         const fields = Object.keys(data[0]).filter(field => field!=="id")
         return (
             <div id="datagrid">
+                <Modal activeStyle = { this.state.showModel ? this.showModalStyle : {} }/>
                 <div className={style.datagridContainer}>
                     <div className={style.datagridHeader}>
                         <h2>{title}</h2>
