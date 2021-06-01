@@ -18,14 +18,14 @@ class Datagrid extends Component {
 
     generalModalStyle = {
         borderRadius: '12px',
-        padding:'0 20px'
+        padding: '0 20px'
     }
 
     constructor(props) {
         super(props)
     }
 
-    modalDisplayHandler = ({ target }) => {
+    modalDisplayHandler = () => {
         this.setState({ showModel: !this.state.showModel })
     }
 
@@ -35,9 +35,9 @@ class Datagrid extends Component {
         return (
             <div id="datagrid">
                 <Modal activeStyle={this.state.showModel ? this.activeModalStyle : {}} generalStyle={this.generalModalStyle}>
-                 
+
                     <Button click={this.modalDisplayHandler} text="✖" cssClass={style.closeButton} />
-                    <InputFile />
+                    <InputFile closeModal={(flag) => { if (flag) this.modalDisplayHandler() }} />
                 </Modal>
                 <div className={style.datagridContainer}>
                     <div className={style.datagridHeader}>

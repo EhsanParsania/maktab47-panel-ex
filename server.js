@@ -43,6 +43,6 @@ server.use((req, res, next) => {
 
 // Use default router
 server.use(router)
-server.listen(3000, () => {
-  console.log('JSON Server is running')
+server.listen(3001, () => {
+  console.log('JSON Server is running on localhost:3001')
 })
