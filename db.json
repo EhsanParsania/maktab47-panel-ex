@@ -1,8 +1,117 @@
 {
   "posts": [
-    { "id": 1, "title": "json-server", "author": "typicode" }
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 }
+  "orders": [
+    {
+      "user": "test",
+      "id": 1,
+      "price": 100,
+      "quantity": 123
+    },
+    {
+      "user": "test",
+      "price": "100$",
+      "quantity": 98,
+      "id": 2
+    },
+    {
+      "user": "test",
+      "price": "150$",
+      "quantity": 93,
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "product1",
+      "id": 1,
+      "price": 100,
+      "color": "red"
+    },
+    {
+      "name": "product2",
+      "price": 289,
+      "color": "blue",
+      "id": 2
+    }
+  ],
+  "customers": [
+    {
+      "name": "amir",
+      "id": 1,
+      "age": 100,
+      "gender": "m"
+    },
+    {
+      "name": "amir",
+      "id": 2,
+      "age": 200,
+      "gender": "f"
+    },
+    {
+      "name": "jack",
+      "age": 20,
+      "gender": "m",
+      "id": 3
+    },
+    {
+      "name": "John",
+      "age": 35,
+      "gender": "m",
+      "id": 4
+    },
+    {
+      "name": "Sara",
+      "age": 42,
+      "gender": "f",
+      "id": 5
+    },
+    {
+      "name": "Nima",
+      "age": 12,
+      "gender": "m",
+      "id": 6
+    },
+    {
+      "name": "Ehsan",
+      "age": 30,
+      "gender": "m",
+      "id": 7
+    },
+    {
+      "name": "David",
+      "age": 38,
+      "gender": "m",
+      "id": 8
+    },
+    {
+      "name": "Anna",
+      "age": 18,
+      "gender": "f",
+      "id": 9
+    },
+    {
+      "name": "Mojan",
+      "age": 24,
+      "gender": "f",
+      "id": 10
+    },
+    {
+      "name": "Ross",
+      "age": 50,
+      "gender": "m",
+      "id": 11
+    },
+    {
+      "name": "Tom",
+      "age": 40,
+      "gender": "m",
+      "id": 12
+    }
   ]
 }
