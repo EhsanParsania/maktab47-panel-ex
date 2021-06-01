@@ -5,6 +5,38 @@ class InputFile extends Component {
   state = {
 
   }
+
+  uploadFile() {
+    return new Promise(function (resolve, reject) {
+      const image = document.getElementById('input').files[0]
+      var data = new FormData();
+      data.append("image", image);
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      xhr.addEventListener("readystatechange", function () {
+        if (this.readyState === 4) {
+          if (this.status >= 200 && this.status < 400) {
+            console.log(this.responseText);
+            if (image) {
+              resolve(true)
+            }
+
+          }
+          else {
+            reject('file not send')
+          }
+
+        }
+
+      });
+      xhr.open("POST", "http://localhost:3001/upload");
+      xhr.send(data);
+    })
+
+  }
+
+
+
   handleChange = async (event) => {
     //setState file name
     const fileName = event.target.files.item(0).name
@@ -22,22 +54,28 @@ class InputFile extends Component {
     reader.readAsDataURL(event.target.files[0])
   }
 
+
+
   submitForm = async (e) => {
     e.preventDefault();
+
     // async ajax post
     // remove modal
 
   }
+
+
+
   render() {
     return (
-      <form onSubmit={this.submitForm} className={style.input_file_container}>
+      <form action='http://localhost:3001/upload' method='POST' encType='multipart/form-data' onSubmit={this.submitForm} className={style.input_file_container}>
         <label className={style.input_file_label}>
           <span className={style.file_name} >{this.state.fileName}</span>
-          <input id='input' onChange={this.handleChange} className={style.input_file} type="file" />
+          <input id='input' type="file" name='image' onChange={this.handleChange} className={style.input_file} />
           <i className={style.upload_button}>Upload File</i>
         </label>
-        <img src="" className={style.image_container} id="output" alt="your picture..."></img>
-        <button className={style.submit_button}>Submit</button>
+        <img src="" className={style.image_container} id="output" alt="pic..."></img>
+        <button type='submit' className={style.submit_button}>Submit</button>
       </form>
     )
   }
