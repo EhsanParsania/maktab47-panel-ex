@@ -60,7 +60,11 @@ class InputFile extends Component {
     e.preventDefault();
 
     // async ajax post
+    const isUpload = await this.uploadFile()
+    console.log(isUpload)
+
     // remove modal
+    this.props.closeModal(isUpload)
 
   }
 
