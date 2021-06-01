@@ -11,7 +11,9 @@ class Datagrid extends Component {
 
     activeModalStyle = {
         opacity:1,
-        top:'100px'
+        top:'100px',
+        width:'550px',
+        height:'550px'
     }
 
     generalModalStyle = {
@@ -31,7 +33,9 @@ class Datagrid extends Component {
         const fields = Object.keys(data[0]).filter(field => field!=="id")
         return (
             <div id="datagrid">
-                <Modal activeStyle = { this.state.showModel ? this.activeModalStyle : {} } generalStyle={this.generalModalStyle} />
+                <Modal activeStyle = { this.state.showModel ? this.activeModalStyle : {} } generalStyle={this.generalModalStyle}>
+                    <Button click={this.modalDisplayHandler} text="close" cssClass={style.closeButton}/>
+                </Modal>
                 <div className={style.datagridContainer}>
                     <div className={style.datagridHeader}>
                         <h2>{title}</h2>
@@ -39,7 +43,7 @@ class Datagrid extends Component {
                             <Button text="Share" cssClass={style.shareButton} />
                             <Button text="Export" cssClass={style.exportButton}/>
                             <Button text="This Week" cssClass={style.weekButton} cssStyle={{marginLeft:"20px"}} />
-                            <Button text="Add"  cssClass={style.addButton} click={this.modalDisplayHandler}/>
+                            <Button text="Add" cssClass={style.addButton} click={this.modalDisplayHandler}/>
                         </div>
                     </div>
                     <table className={style.datagridTable}>
