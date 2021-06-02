@@ -4,7 +4,7 @@ const router = jsonServer.router('db.json')
 const middlewares = jsonServer.defaults()
 const fs = require('fs')
 const path = require('path')
-const multer  = require('multer')
+const multer = require('multer')
 const upload = multer({ dest: 'uploads/' })
 
 // Set default middlewares (logger, static, cors and no-cache)
@@ -27,7 +27,7 @@ server.get('/files', (req, res, next) => {
 server.get('/files/:file_id', (req, res, next) => {
   const { file_id } = req.params
   res.set('Content-Type', 'image/jpeg')
-  res.sendFile(path.join(__dirname, 'uploads/'+file_id))
+  res.sendFile(path.join(__dirname, 'uploads/' + file_id))
 })
 
 // To handle POST, PUT and PATCH you need to use a body-parser
@@ -44,5 +44,5 @@ server.use((req, res, next) => {
 // Use default router
 server.use(router)
 server.listen(3001, () => {
-  console.log('JSON Server is running on localhost:3001')
+  console.log('JSON Server is running on http://localhost:3001')
 })
