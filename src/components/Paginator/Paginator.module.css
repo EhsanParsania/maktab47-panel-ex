@@ -1,3 +1,9 @@
-.test {
-    background-color: red;
+.paginatorContainer {
+    margin-bottom: 200px;
+    display: flex;
+    justify-content:center;
+}
+
+.paginatorButton {
+    margin: 10px;
 }
