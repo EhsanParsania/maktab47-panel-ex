@@ -1,5 +1,7 @@
+import axios from 'axios'
 import { Component } from 'react'
 import style from './InputFile.module.css'
+
 
 class InputFile extends Component {
   state = {
@@ -53,16 +55,40 @@ class InputFile extends Component {
   }
 
 
+  uploadData = async () => {
+    const name = document.getElementById('input-name').value
+    const age = document.getElementById('input-age').value
+    const gender = document.getElementById('input-gender').value
+
+    const url = 'http://localhost:3002/customers'
+    const data = {
+      name,
+      age,
+      gender
+    }
+    axios.post(url, data)
+
+  }
+
+
 
   submitForm = async (e) => {
     e.preventDefault();
 
-    // post file and get boolean result
-    const isUpload = await this.uploadFile()
+    try {
+      // post file and get boolean result
+      const isUpload = await this.uploadFile()
 
-    // remove modal
-    this.props.closeModal(isUpload)
+      //post input data to json-server
+      await this.uploadData()
 
+      // remove modal
+      this.props.closeModal(isUpload)
+    }
+    catch (error) {
+      console.log(error)
+
+    }
   }
 
 
@@ -76,6 +102,12 @@ class InputFile extends Component {
           <i className={style.upload_button}>Upload File</i>
         </label>
         <img src="" className={style.image_container} id="output" alt="pic..."></img>
+        <label for='input-name'>Name</label>
+        <input id='input-name' name='name' type='text' />
+        <label for='input-age'>Age</label>
+        <input id='input-age' age='age' type='text' />
+        <label for='input-gender'>Gender</label>
+        <input id='input-gender' gender='gender' type='text' />
         <button type='submit' className={style.submit_button}>Submit</button>
       </form>
     )
