@@ -6,6 +6,10 @@ h1, h2, ul {
     margin: 0;
 }
 
+button {
+    border: none;
+}
+
 #container {
     display:flex;
     width:100%;
