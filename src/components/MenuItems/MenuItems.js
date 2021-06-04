@@ -8,6 +8,7 @@ class MenuItems extends Component {
         const data = await getData(dataName)
         const fetchedData = JSON.parse(data)
         const length = fetchedData.length
+        this.props.setItemsStart(0,1)
         this.props.dataSetter(fetchedData, dataName)
     }
 

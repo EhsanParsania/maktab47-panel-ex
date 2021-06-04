@@ -25,27 +25,27 @@ class App extends Component {
         currentTitle:'customers',
         dataLength:0,
         itemsPerPage:2,
-        itemsStart:0
+        itemsStart:0,
+        currentPage:1
     }
 
     setData =async (data, title) => {
         await this.setState({ data: data, title: title })
         await this.setState({ currentTitle:title })
-        console.log(this.state)
     }
 
-    setItemsStart = async (itemsStart) => {
-        await this.setState({ itemsStart })
+    setItemsStart = async (itemsStart, currentPage) => {
+        await this.setState({ itemsStart, currentPage })
     }
 
     url='http://localhost:3002/'
 
     render() {
-        const {itemsStart, itemsPerPage} = this.state
+        const {itemsStart, itemsPerPage, currentPage} = this.state
         const pageData = [...this.state.data].splice( itemsStart * itemsPerPage ,itemsPerPage )
         return (
             <div id="container">
-                <MenuItems dataSetter={this.setData} />
+                <MenuItems dataSetter={this.setData} setItemsStart={this.setItemsStart} />
                 <Datagrid data={pageData} title={this.state.title}>
                     <Paginator length={this.state.dataLength} itemsNum={this.state.data.length} itemsNumPerPage={this.state.itemsPerPage} setItemsStart={this.setItemsStart} />
                 </Datagrid>
