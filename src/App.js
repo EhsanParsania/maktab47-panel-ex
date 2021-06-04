@@ -37,7 +37,9 @@ class App extends Component {
         return (
             <div id="container">
                 <MenuItems dataSetter={this.setData} />
-                <Datagrid data={this.state.data} title={this.state.title}><Paginator length={this.state.dataLength}/></Datagrid>
+                <Datagrid data={this.state.data} title={this.state.title}>
+                    <Paginator length={this.state.dataLength} itemsNum={"10"} itemsNumPerPage = {"3"}/>
+                </Datagrid>
                 <div>
                     <InputData url={this.url+this.state.currentTitle} title1={this.state.currentTitle[0]} title2={this.state.currentTitle[1]} title3={this.state.currentTitle[2]} />
                 </div>
