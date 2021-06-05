@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:3002'
+const url = 'http://localhost:3001'
 
 // get data request function
 async function getData(dataName) {
@@ -40,7 +40,7 @@ async function postData(dataObject, dataName) {
         console.log(this.responseText);
       }
     };
-    const url = "http://localhost:3002/" + dataName
+    const url = "http://localhost:3001/" + dataName
     console.log(url)
     xhr.open("POST", url);
     xhr.setRequestHeader("Content-Type", "application/json");

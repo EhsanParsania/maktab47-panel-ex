@@ -70,7 +70,7 @@
   ],
   "products": [
     {
-      "name": "product1",
+      "name": "name",
       "price": "100$",
       "color": "red",
       "id": 1
@@ -108,7 +108,7 @@
   ],
   "customers": [
     {
-      "name": "ali",
+      "name": "name",
       "id": 1,
       "age": 24,
       "gender": "m",
@@ -119,77 +119,91 @@
       "id": 2,
       "age": 45,
       "gender": "m",
-      "avatar":"https://reqres.in/img/faces/7-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "jack",
       "age": 20,
       "gender": "m",
       "id": 3,
-      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "John",
       "age": 35,
       "gender": "m",
       "id": 4,
-      "avatar": "https://reqres.in/img/faces/9-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Sara",
       "age": 42,
       "gender": "f",
       "id": 5,
-      "avatar":"https://reqres.in/img/faces/10-image.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     },
     {
       "name": "Nima",
       "age": 12,
       "gender": "m",
       "id": 6,
-      "avatar": "https://reqres.in/img/faces/9-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Ehsan",
       "age": 30,
       "gender": "m",
       "id": 7,
-      "avatar": "https://reqres.in/img/faces/10-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "David",
       "age": 38,
       "gender": "m",
       "id": 8,
-      "avatar": "https://reqres.in/img/faces/9-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Anna",
       "age": 18,
       "gender": "f",
       "id": 9,
-      "avatar": "https://reqres.in/img/faces/10-image.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     },
     {
       "name": "Mojan",
       "age": 24,
       "gender": "f",
       "id": 10,
-      "avatar": "https://reqres.in/img/faces/8-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Ross",
       "age": 50,
       "gender": "m",
       "id": 11,
-      "avatar":"https://reqres.in/img/faces/7-image.jpg"
+      "avatar": "https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Tom",
       "age": 40,
       "gender": "m",
-      "id": 12,
+      "id": 12
+    },
+    {
+      "name": "ehsan-parsania",
+      "age": "30",
+      "gender": "m",
+      "createdAt": 1622905355735,
+      "id": 13,
       "avatar": "https://reqres.in/img/faces/8-image.jpg"
+    },
+    {
+      "name": "ehsan-parsania",
+      "age": "30",
+      "gender": "m",
+      "createdAt": 1622905751655,
+      "id": 14
     }
   ]
 }

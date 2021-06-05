@@ -6,6 +6,7 @@ class MenuItems extends Component {
 
     handleClick = async (dataName)=>{
         const data = await getData(dataName)
+        console.log(data)
         const fetchedData = JSON.parse(data)
         const length = fetchedData.length
         this.props.setItemsStart(0,1)

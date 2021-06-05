@@ -22,7 +22,7 @@ class InputFile extends Component {
           if (this.status >= 200 && this.status < 400) {
             console.log(this.responseText);
             if (image) {
-              resolve(true)
+              resolve({isUpload:true,fileName:this.response})
             }
           }
           else {
@@ -60,7 +60,7 @@ class InputFile extends Component {
     const age = document.getElementById('input-age').value
     const gender = document.getElementById('input-gender').value
 
-    const url = 'http://localhost:3002/customers'
+    const url = 'http://localhost:3001/customers'
     const data = {
       name,
       age,
@@ -78,6 +78,9 @@ class InputFile extends Component {
     try {
       // post file and get boolean result
       const isUpload = await this.uploadFile()
+
+      // const {isUpload,fileName} = await this.uploadFile()
+      // console.log(isUpload,fileName)
 
       //post input data to json-server
       await this.uploadData()
