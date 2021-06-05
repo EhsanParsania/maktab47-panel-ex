@@ -112,84 +112,84 @@
       "id": 1,
       "age": 24,
       "gender": "m",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/adamnac/128.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     },
     {
       "name": "amir",
       "id": 2,
       "age": 45,
       "gender": "m",
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jeremyshimko/128.jpg"
+      "avatar":"https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "jack",
       "age": 20,
       "gender": "m",
       "id": 3,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ernestsemerda/128.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     },
     {
       "name": "John",
       "age": 35,
       "gender": "m",
       "id": 4,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/linux29/128.jpg"
+      "avatar": "https://reqres.in/img/faces/9-image.jpg"
     },
     {
       "name": "Sara",
       "age": 42,
       "gender": "f",
       "id": 5,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/catadeleon/128.jpg"
+      "avatar":  "avatar": "https://reqres.in/img/faces/10-image.jpg"
     },
     {
       "name": "Nima",
       "age": 12,
       "gender": "m",
       "id": 6,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
+      "avatar": "https://reqres.in/img/faces/9-image.jpg"
     },
     {
       "name": "Ehsan",
       "age": 30,
       "gender": "m",
       "id": 7,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/sulaqo/128.jpg"
+      "avatar": "https://reqres.in/img/faces/10-image.jpg"
     },
     {
       "name": "David",
       "age": 38,
       "gender": "m",
       "id": 8,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
+      "avatar": "https://reqres.in/img/faces/9-image.jpg"
     },
     {
       "name": "Anna",
       "age": 18,
       "gender": "f",
       "id": 9,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
+      "avatar": "https://reqres.in/img/faces/10-image.jpg"
     },
     {
       "name": "Mojan",
       "age": 24,
       "gender": "f",
       "id": 10,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     },
     {
       "name": "Ross",
       "age": 50,
       "gender": "m",
       "id": 11,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
+      "avatar":"https://reqres.in/img/faces/7-image.jpg"
     },
     {
       "name": "Tom",
       "age": 40,
       "gender": "m",
       "id": 12,
-      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
+      "avatar": "https://reqres.in/img/faces/8-image.jpg"
     }
   ]
 }
