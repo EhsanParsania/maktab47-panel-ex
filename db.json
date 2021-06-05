@@ -140,7 +140,7 @@
       "age": 42,
       "gender": "f",
       "id": 5,
-      "avatar":  "avatar": "https://reqres.in/img/faces/10-image.jpg"
+      "avatar":"https://reqres.in/img/faces/10-image.jpg"
     },
     {
       "name": "Nima",
