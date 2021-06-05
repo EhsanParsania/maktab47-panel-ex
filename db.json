@@ -1,22 +1,24 @@
 {
-  "products": [
+  "posts": [
     {
-      "name": "asus laptop",
-      "brand": "asus",
-      "image": "/files/3d545729eb7cdb3f85407805ec160740",
-      "price": "1000",
-      "createdAt": 1622901942857,
-      "id": 1
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "orders": [
+    {
+      "user": "Mona",
+      "id": 1,
+      "price": "320$",
+      "quantity": 123
     },
     {
-      "name": "apple laptop",
-      "brand": "apple",
-      "image": "/files/65ddd8b1bbce4d8396b62611147fa1d6",
-      "price": "2000",
-      "createdAt": 1622901942857,
+      "user": "Mandy",
+      "price": "100$",
+      "quantity": 67,
       "id": 2
-    }
-      ,
+    },
     {
       "user": "Morgan",
       "price": "150$",
@@ -102,6 +104,14 @@
       "price": "120$",
       "color": "black",
       "id": 6
+    },
+    {
+      "createdAt": 1622911000600,
+      "id": 7
+    },
+    {
+      "createdAt": 1622911041032,
+      "id": 8
     }
   ],
   "customers": [
@@ -202,6 +212,10 @@
       "gender": "m",
       "createdAt": 1622905751655,
       "id": 14
+    },
+    {
+      "createdAt": 1622911074310,
+      "id": 15
     }
   ]
 }
