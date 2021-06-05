@@ -24,5 +24,3 @@ class InputData extends Component{
     )
   }
 }
-
-export {InputData}

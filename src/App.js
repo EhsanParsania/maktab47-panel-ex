@@ -38,7 +38,6 @@ class App extends Component {
         await this.setState({ itemsStart, currentPage })
     }
 
-    url='http://localhost:3002/'
 
     render() {
         const {itemsStart, itemsPerPage, currentPage} = this.state
@@ -49,9 +48,6 @@ class App extends Component {
                 <Datagrid data={pageData} title={this.state.title}>
                     <Paginator length={this.state.dataLength} itemsNum={this.state.data.length} itemsNumPerPage={this.state.itemsPerPage} setItemsStart={this.setItemsStart} />
                 </Datagrid>
-                <div>
-                    <InputData url={this.url+this.state.currentTitle} title1={this.state.currentTitle[0]} title2={this.state.currentTitle[1]} title3={this.state.currentTitle[2]} />
-                </div>
             </div>
         )
     }
