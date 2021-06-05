@@ -3,6 +3,8 @@ import { Button } from "../index"
 import { Modal } from "../index"
 import style from "./DataGrid.module.css"
 import { InputFile } from '../index'
+import {Avatar} from "../index"
+
 class Datagrid extends Component {
 
     state = {
@@ -32,6 +34,7 @@ class Datagrid extends Component {
     render() {
         const { data, title } = this.props
         const fields = Object.keys(data[0]).filter(field => field !== "id")
+        console.log(fields)
         return (
             <div id="datagrid">
                 <Modal activeStyle={this.state.showModel ? this.activeModalStyle : {}} generalStyle={this.generalModalStyle}>
@@ -54,6 +57,7 @@ class Datagrid extends Component {
                             <tr style={{ backgroundColor: "#eee" }}>
                                 <th>#</th>
                                 {fields.map((field, fieldIndex) => <th key={fieldIndex}>{field}</th>)}
+                                <th>avatar</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -62,6 +66,9 @@ class Datagrid extends Component {
                                     <tr key={dataIndex} style={{ backgroundColor: dataIndex % 2 === 0 ? "#fff" : "#eee" }} >
                                         <td>{item['id']}</td>
                                         {fields.map((field, fieldIndex) => <td key={fieldIndex}>{item[field]}</td>)}
+                                        <td>
+                                            <Avatar src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg"/>
+                                        </td>
                                     </tr>
                                 )
                             })}
