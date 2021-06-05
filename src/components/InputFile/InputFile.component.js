@@ -102,12 +102,13 @@ class InputFile extends Component {
           <i className={style.upload_button}>Upload File</i>
         </label>
         <img src="" className={style.image_container} id="output" alt="pic..."></img>
-        <label for='input-name'>Name</label>
-        <input id='input-name' name='name' type='text' />
-        <label for='input-age'>Age</label>
-        <input id='input-age' age='age' type='text' />
-        <label for='input-gender'>Gender</label>
-        <input id='input-gender' gender='gender' type='text' />
+
+        <label className={style.input_labels}  for='input-name'>Name</label>
+        <input id='input-name' className={style.inputs} name='name' type='text' />
+        <label className={style.input_labels}  for='input-age'>Age</label>
+        <input id='input-age' className={style.inputs} age='age' type='text' />
+        <label className={style.input_labels}  for='input-gender'>Gender</label>
+        <input id='input-gender' className={style.inputs} gender='gender' type='text' />
         <button type='submit' className={style.submit_button}>Submit</button>
       </form>
     )

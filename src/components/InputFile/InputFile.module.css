@@ -94,3 +94,18 @@ height:80%;
   background-color: #c4f0fd;
 
 }
+
+.inputs{
+  border: 1px solid #ccc;
+  height: 2.4em;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input_labels{
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+font-weight: bold;
+
+}
