@@ -13,8 +13,16 @@ class InputFile extends Component {
   uploadFile() {
     return new Promise(function (resolve, reject) {
       const image = document.getElementById('input').files[0]
+      const name = document.getElementById('input-name').value
+      const age = document.getElementById('input-age').value
+      const gender = document.getElementById('input-gender').value
+  
       var data = new FormData();
       data.append("image", image);
+      data.append("name",name)
+      data.append("age",age)
+      data.append("gender",gender)
+
       var xhr = new XMLHttpRequest();
       xhr.withCredentials = true;
       xhr.addEventListener("readystatechange", function () {
@@ -30,7 +38,7 @@ class InputFile extends Component {
           }
         }
       });
-      xhr.open("POST", "http://localhost:3001/upload");
+      xhr.open("POST", "http://localhost:3001/customers");
       xhr.send(data);
     })
 
@@ -83,7 +91,7 @@ class InputFile extends Component {
       // console.log(isUpload,fileName)
 
       //post input data to json-server
-      await this.uploadData()
+
 
       // remove modal
       this.props.closeModal(isUpload)

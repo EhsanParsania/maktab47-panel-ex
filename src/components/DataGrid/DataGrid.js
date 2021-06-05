@@ -67,7 +67,7 @@ class Datagrid extends Component {
                                         <td>{item['id']}</td>
                                         {fields.map((field, fieldIndex) => { 
                                             return (
-                                                field === "avatar" ?  <td key={fieldIndex}><Avatar src={item[field]}/></td> : <td key={fieldIndex}>{item[field]}</td>
+                                                field === "image" ?  <td key={fieldIndex}><Avatar src={'http://localhost:3001'+item[field]}/></td> : <td key={fieldIndex}>{item[field]}</td>
                                             )
                                         })}
                                         {/* <td>
