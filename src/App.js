@@ -24,7 +24,7 @@ class App extends Component {
         products:['name','price','color'],
         currentTitle:'customers',
         dataLength:0,
-        itemsPerPage:2,
+        itemsPerPage:4,
         itemsStart:0,
         currentPage:1
     }

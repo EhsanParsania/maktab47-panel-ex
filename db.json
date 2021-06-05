@@ -111,73 +111,85 @@
       "name": "ali",
       "id": 1,
       "age": 24,
-      "gender": "m"
+      "gender": "m",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/adamnac/128.jpg"
     },
     {
       "name": "amir",
       "id": 2,
       "age": 45,
-      "gender": "m"
+      "gender": "m",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/jeremyshimko/128.jpg"
     },
     {
       "name": "jack",
       "age": 20,
       "gender": "m",
-      "id": 3
+      "id": 3,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ernestsemerda/128.jpg"
     },
     {
       "name": "John",
       "age": 35,
       "gender": "m",
-      "id": 4
+      "id": 4,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/linux29/128.jpg"
     },
     {
       "name": "Sara",
       "age": 42,
       "gender": "f",
-      "id": 5
+      "id": 5,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/catadeleon/128.jpg"
     },
     {
       "name": "Nima",
       "age": 12,
       "gender": "m",
-      "id": 6
+      "id": 6,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
     },
     {
       "name": "Ehsan",
       "age": 30,
       "gender": "m",
-      "id": 7
+      "id": 7,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/sulaqo/128.jpg"
     },
     {
       "name": "David",
       "age": 38,
       "gender": "m",
-      "id": 8
+      "id": 8,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
     },
     {
       "name": "Anna",
       "age": 18,
       "gender": "f",
-      "id": 9
+      "id": 9,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
     },
     {
       "name": "Mojan",
       "age": 24,
       "gender": "f",
-      "id": 10
+      "id": 10,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
     },
     {
       "name": "Ross",
       "age": 50,
       "gender": "m",
-      "id": 11
+      "id": 11,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/ilya_pestov/128.jpg"
     },
     {
       "name": "Tom",
       "age": 40,
       "gender": "m",
-      "id": 12
+      "id": 12,
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/mr_shiznit/128.jpg"
     }
   ]
 }
