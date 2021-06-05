@@ -57,7 +57,7 @@ class Datagrid extends Component {
                             <tr style={{ backgroundColor: "#eee" }}>
                                 <th>#</th>
                                 {fields.map((field, fieldIndex) => <th key={fieldIndex}>{field}</th>)}
-                                <th>avatar</th>
+                                {/* <th>avatar</th> */}
                             </tr>
                         </thead>
                         <tbody>
@@ -65,10 +65,14 @@ class Datagrid extends Component {
                                 return (
                                     <tr key={dataIndex} style={{ backgroundColor: dataIndex % 2 === 0 ? "#fff" : "#eee" }} >
                                         <td>{item['id']}</td>
-                                        {fields.map((field, fieldIndex) => <td key={fieldIndex}>{item[field]}</td>)}
-                                        <td>
+                                        {fields.map((field, fieldIndex) => { 
+                                            return (
+                                                field === "avatar" ?  <td key={fieldIndex}><Avatar src={item[field]}/></td> : <td key={fieldIndex}>{item[field]}</td>
+                                            )
+                                        })}
+                                        {/* <td>
                                             <Avatar src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg"/>
-                                        </td>
+                                        </td> */}
                                     </tr>
                                 )
                             })}
