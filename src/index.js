@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getData} from './model/AjaxRequests'
-import {Header} from './layouts/Header/Header'
 import {App} from "./App"
+import {Main} from './layouts/Main.layout'
 
 ReactDOM.render(
-  <Header><App/></Header>
+  <Main><App/></Main>
 ,
   document.getElementById('root')
 );
