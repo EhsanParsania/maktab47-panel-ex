@@ -66,9 +66,15 @@ class Datagrid extends Component {
                                     <tr key={dataIndex} style={{ backgroundColor: dataIndex % 2 === 0 ? "#fff" : "#eee" }} >
                                         <td>{item['id']}</td>
                                         {fields.map((field, fieldIndex) => { 
-                                            return (
-                                                field === "image" ?  <td key={fieldIndex}><Avatar src={'http://localhost:3001'+item[field]}/></td> : <td key={fieldIndex}>{item[field]}</td>
-                                            )
+                                                if(field === "image") {
+                                                    return <td key={fieldIndex}><Avatar src={'http://localhost:3001'+item[field]}/></td> 
+                                                }
+                                                else if (field === "createdAt"){
+                                                    return <td key={fieldIndex}>{new Date(item[field]).toLocaleString('fa-IR')}</td>
+                                                }
+                                                else{
+                                                    return <td key={fieldIndex}>{item[field]}</td>
+                                                } 
                                         })}
                                         {/* <td>
                                             <Avatar src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Arh-avatar.jpg"/>
