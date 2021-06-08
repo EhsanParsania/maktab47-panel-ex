@@ -1,55 +1,46 @@
+import axios from 'axios'
 
 const url = 'http://localhost:3001'
 
-// get data request function
-async function getData(dataName) {
-  const currentUrl = url + "/" + dataName
-  return new Promise(function (resolve, reject) {
-    let xhr = new XMLHttpRequest()
-    xhr.open('GET', currentUrl)
-    xhr.send()
-    xhr.onreadystatechange = function () {
-      if (this.readyState === 4) {
-        if (this.status >= 200 && this.status < 400) {
-          console.log('request resolved')
-          resolve(xhr.responseText)
-        }
-        else {
-          console.log(xhr.status)
-          reject(xhr.status)
-        }
-      }
-    }
-  })
-}
 
-//it gets an object and a name for generating post url : 
-async function postData(dataObject, dataName) {
-  return new Promise(function (resolve, reject) {
-    var data = JSON.stringify(dataObject);
-
-    const xhr = new XMLHttpRequest();
-    xhr.onreadystatechange = function () {
-      if (this.readyState === 4) {
-        if (this.status >= 200 && this.status < 400) {
-          resolve(console.log('data sent'))
-        }
-        else {
-          reject(console.log('rejected  :' + xhr.status))
-        }
-        console.log(this.responseText);
-      }
-    };
-    const url = "http://localhost:3001/" + dataName
-    console.log(url)
-    xhr.open("POST", url);
-    xhr.setRequestHeader("Content-Type", "application/json");
-
-    xhr.send(data);
-  })
+function getData(dataName) {
+  const currentUrl = url + '/' + dataName
+  return axios.get(currentUrl)
+    .then((res) => res.data)
+    .catch(error => console.log(error))
 }
 
 
 
+function uploadCustomerData(image, name, age, gender) {
+  const currentUrl = url + '/' + 'customers'
+  console.log(currentUrl)
+  //init a body form data 
+  let bodyFormData = new FormData()
 
-export { getData, postData }
+  bodyFormData.append('image', image)
+  bodyFormData.append('name', name)
+  bodyFormData.append('age', age)
+  bodyFormData.append('gender', gender)
+
+
+  return axios({
+    url: currentUrl,
+    method: 'POST',
+    data: bodyFormData,
+    Headers: { "Content-Type": "multipart/form-data" }
+  })
+    .then(res => {
+
+      //return true for closing modal
+      return true
+    })
+    .catch(error => {
+      console.log(error)
+      //return false to not closing Modal
+      return false
+    })
+}
+
+
+export { getData, uploadCustomerData }

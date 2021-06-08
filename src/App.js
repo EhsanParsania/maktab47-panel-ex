@@ -2,7 +2,6 @@ import { Component } from "react"
 import "./App.css"
 import { Datagrid, MenuItems } from "./components/index"
 import { getData } from "./model/AjaxRequests"
-import { InputData } from './components/index'
 import {Paginator} from './components/index'
 
 class App extends Component {
@@ -10,7 +9,7 @@ class App extends Component {
     componentDidMount() {
         getData('orders')
             .then(data => {
-                const fetchedData = JSON.parse(data)
+                const fetchedData = data
                 const dataLength = fetchedData.length
                 this.setState({ data: fetchedData, title: 'orders', dataLength:dataLength })
             })

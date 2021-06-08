@@ -5,7 +5,7 @@ class Avatar extends Component {
         const { src } = this.props
         return (
             <div style={{width:"40px", height:"40px"}}>
-                <img style={{width:"40px", height:"40px",borderRadius:"50%"}} src={src} />
+                <img style={{width:"40px", height:"40px",borderRadius:"50%"}} src={src} alt='pic' />
             </div>
         )
     }

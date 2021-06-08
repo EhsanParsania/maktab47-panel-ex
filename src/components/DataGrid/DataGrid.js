@@ -23,10 +23,6 @@ class Datagrid extends Component {
         padding: '0 20px'
     }
 
-    constructor(props) {
-        super(props)
-    }
-
     modalDisplayHandler = () => {
         this.setState({ showModel: !this.state.showModel })
     }
@@ -34,7 +30,6 @@ class Datagrid extends Component {
     render() {
         const { data, title } = this.props
         const fields = Object.keys(data[0]).filter(field => field !== "id")
-        console.log(fields)
         return (
             <div id="datagrid">
                 <Modal activeStyle={this.state.showModel ? this.activeModalStyle : {}} generalStyle={this.generalModalStyle}>

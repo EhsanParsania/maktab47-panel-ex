@@ -2,9 +2,6 @@ import { Component } from "react"
 import styles from "./Modal.module.css"
 
 class Modal extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     render() {
         const { activeStyle, generalStyle, children } = this.props
